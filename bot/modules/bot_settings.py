@@ -233,7 +233,7 @@ async def load_config():
         BASE_URL = ""
     else:
         await create_subprocess_shell(
-            "gunicorn web.wserver:app --bind 0.0.0.0:80 --worker-class gevent"
+            "gunicorn web.wserver:app --bind 0.0.0.0:60 --worker-class gevent"
         )
 
     UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "")
