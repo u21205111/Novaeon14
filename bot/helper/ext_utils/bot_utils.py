@@ -191,7 +191,7 @@ def bt_selection_buttons(id_):
     pincode = "".join([n for n in id_ if n.isdigit()][:4])
     buttons = ButtonMaker()
     BASE_URL = config_dict["BASE_URL"]
-    buttons.url("Select", f"{BASE_URL}/app/files/{id_}")
+    buttons.url("Select", f"{BASE_URL}:60/app/files/{id_}")
     buttons.callback("Pincode", f"btsel pin {gid} {pincode}")
     buttons.callback("Cancel", f"btsel rm {gid} {id_}")
     buttons.callback("Done Selecting", f"btsel done {gid} {id_}")
